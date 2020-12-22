@@ -1,0 +1,26 @@
+version: '3'
+
+## Make sure the machine contains java 8 + and Apache Maven installed run this command
+##  mvn package && cp target/club-health.jar docker/api && cd docker && docker-compose up --build -d && rm -r api/club-health.jar && cd ..
+## aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 988373355684.dkr.ecr.us-east-1.amazonaws.com && docker tag clubhealthapi:latest 988373355684.dkr.ecr.us-east-1.amazonaws.com/clubhealthapi:latest && docker push 988373355684.dkr.ecr.us-east-1.amazonaws.com/clubhealthapi:latest
+services:
+  tests-database:
+    build:
+      dockerfile: Dockerfile
+      context: database
+    image: testsdatabase
+    container_name: tests-database
+    restart: always
+    ports:
+      - 5433:5432
+    networks:
+      testsNetWork:
+        ipv4_address: 172.10.5.2
+
+networks:
+  testsNetWork:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.10.5.0/29

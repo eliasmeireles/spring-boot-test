@@ -1,14 +1,14 @@
 spring:
-#  r2dbc:
-#    url: r2dbc:postgresql://127.0.0.1:5433/postgres?schema=anime
-#    password: 12345678
-#    username: root
-#  flyway:
-#    url: jdbc:postgresql://127.0.0.1:5433/postgres
-#    schemas: anime
-#    password: 12345678
-#    user: root
-#    baseline-on-migrate: true
+  r2dbc:
+    url: r2dbc:postgresql://127.0.0.1:5433/postgres?schema=anime
+    password: 12345678
+    username: root
+  flyway:
+    url: jdbc:postgresql://127.0.0.1:5433/postgres
+    schemas: anime
+    password: 12345678
+    user: root
+    baseline-on-migrate: true
 
   datasource:
     driver-class-name: org.postgresql.Driver

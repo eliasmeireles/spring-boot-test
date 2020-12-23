@@ -36,7 +36,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.4.2")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.4.2")
     testImplementation("io.projectreactor:reactor-test")
-    testImplementation("io.projectreactor.tools:blockhound:1.0.4.RELEASE")
+    implementation("io.projectreactor.tools:blockhound:1.0.4.RELEASE")
     testImplementation ("org.testcontainers:postgresql:1.15.1")
 }
 

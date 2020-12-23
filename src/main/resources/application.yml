@@ -3,6 +3,7 @@ spring:
     url: r2dbc:postgresql://127.0.0.1:5433/postgres?schema=anime
     password: 12345678
     username: root
+
   flyway:
     url: jdbc:postgresql://127.0.0.1:5433/postgres
     schemas: anime
@@ -12,3 +13,9 @@ spring:
 
   datasource:
     driver-class-name: org.postgresql.Driver
+
+logging:
+  level:
+    org:
+      springframework:
+        r2dbc: DEBUG

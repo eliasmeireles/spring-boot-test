@@ -1,7 +1,7 @@
 package com.softwareplace.clubhealth.repository
 
 import com.softwareplace.clubhealth.container.DBContainerTest
-import com.softwareplace.clubhealth.entities.AppUser
+import com.softwareplace.clubhealth.domain.AppUser
 import junit.framework.TestCase.assertNotNull
 import org.junit.Before
 import org.junit.ClassRule

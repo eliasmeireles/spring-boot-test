@@ -1,6 +1,6 @@
 package com.softwareplace.clubhealth.service
 
-import com.softwareplace.clubhealth.entities.AppUser
+import com.softwareplace.clubhealth.domain.AppUser
 import com.softwareplace.clubhealth.repository.AppUserRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service

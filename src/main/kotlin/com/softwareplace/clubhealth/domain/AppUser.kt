@@ -1,4 +1,4 @@
-package com.softwareplace.clubhealth.entities
+package com.softwareplace.clubhealth.domain
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Table

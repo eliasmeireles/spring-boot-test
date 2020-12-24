@@ -1,6 +1,6 @@
 package com.softwareplace.clubhealth.controller
 
-import com.softwareplace.clubhealth.entities.AppUser
+import com.softwareplace.clubhealth.domain.AppUser
 import com.softwareplace.clubhealth.service.UserService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity

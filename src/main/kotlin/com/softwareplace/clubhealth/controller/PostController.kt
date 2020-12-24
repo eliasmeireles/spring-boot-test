@@ -12,10 +12,10 @@ import reactor.core.publisher.Mono
 class PostController(val service: PostService) {
 
     @GetMapping
-    fun getPost(
+    suspend fun getPost(
             @RequestParam("page") page: Int?,
             @RequestParam("count") count: Int?,
-    ): Mono<Page<Post>> {
+    ): Page<UserPost> {
         return service.getPosts(page, count)
     }
 

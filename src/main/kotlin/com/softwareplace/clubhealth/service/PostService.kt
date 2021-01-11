@@ -1,6 +1,5 @@
 package com.softwareplace.clubhealth.service
 
-import com.softwareplace.clubhealth.domain.Post
 import com.softwareplace.clubhealth.domain.PostImage
 import com.softwareplace.clubhealth.entities.UserPost
 import com.softwareplace.clubhealth.repository.PostImageRepository
@@ -22,13 +21,12 @@ class PostService(val repository: PostRepository, val postImageRepository: PostI
 
         val content: ArrayList<UserPost> = arrayListOf()
 
-        for(post: Post in pageResponse.content) {
+        pageResponse.content.forEach { post ->
             val element: MutableList<PostImage> =  postImageRepository.findAllByPostId(postId = post.postId!!)
                 .collectList().awaitFirst()
 
             content.add(UserPost(appUserId = post.appUserId, content = post.content, images = element.map { it.imageUrl }))
         }
-
         return  PageImpl(content, pageResponse.pageable, pageResponse.totalElements)
     }
 
